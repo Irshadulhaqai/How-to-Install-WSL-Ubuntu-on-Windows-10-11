@@ -1,4 +1,4 @@
-# How-to-Install-WSL-Ubuntu-on-Windows-10-11-Step-by-Step-for-Beginners
+# How-to-Install-WSL-Ubuntu-on-Windows-10-11-
 
 
 # 🚀 Claude Code Router: Master Setup Guide (WSL + Gemini)
@@ -270,4 +270,4 @@ Use these commands to verify your setup:
 
 ---  
 
-**Maintained by Muhammad Hammad** | [LinkedIn Profile](https://www.linkedin.com/in/devhammad0)
+**Maintained by Irshad Ul Haq** | [LinkedIn Profile](https://www.linkedin.com/in/irshad-ulhaq-ai/)
