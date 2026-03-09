@@ -11,9 +11,10 @@ This repository is the official guide for my YouTube tutorial. It helps you set 
 
 ---
 
-## 🛠 Step 0: Install Windows Subsystem for Linux (WSL)
+## 🛠 Step 0: Install Windows Subsystem for Linux (WSL) 🐧
 
-**Important:** This is the first thing you need to do. We are setting up a Linux environment where **Claude Code** will run.
+**Important:** 
+This is the first thing you need to do. We are setting up a Linux environment where **Claude Code** will run.
 
 **Why use WSL?**
 Using WSL (Ubuntu) is highly recommended over PowerShell because it reduces the chance of errors and uses fewer tokens during coding
