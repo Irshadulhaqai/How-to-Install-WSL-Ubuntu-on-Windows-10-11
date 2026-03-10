@@ -99,7 +99,11 @@ ccr code
 
 ---
 
-# 🛠 **Method 2: Manual Installation (Step-by-Step)**
+# 🛠 **Method 2: Manual Installation**
+
+Use this if you want to install everything step-by-step.
+
+---
 
 ## 1. **Update Linux Packages**
 
@@ -107,6 +111,8 @@ ccr code
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y curl git build-essential
 ```
+
+---
 
 ## 2. **Install Node.js (via NVM)**
 
@@ -121,7 +127,6 @@ nvm install --lts
    node -v
    npm -v
    ```
-
 
 ---
 
