@@ -11,7 +11,7 @@ This repository is the official guide for my YouTube tutorial. It helps you set 
 
 ---
 
-## 🛠 Step 0: Install Windows Subsystem for Linux (WSL) 🐧
+# 🛠 Step 0: Install Windows Subsystem for Linux (WSL) 🐧
 
 **Important:** 
 This is the first thing you need to do. We are setting up a Linux environment where **Claude Code** will run.
@@ -60,7 +60,7 @@ Keep this terminal open and continue.
 
 ---
 
-## ⚡ Method 1: Automated "Speedrun" Script
+# ⚡ Method 1 — Automatic Speedrun Setup (Recommended)
 
 ### 1. Run the Installer
 Inside your **WSL / Ubuntu** terminal, run:
@@ -97,7 +97,7 @@ ccr code
 
 ---
 
-## 🛠 **Method 2: Manual Installation (Step-by-Step)**
+# 🛠 **Method 2: Manual Installation (Step-by-Step)**
 
 ### 1. **Update Linux Packages**
 
