@@ -97,16 +97,16 @@ ccr code
 
 ---
 
-## 🛠 Method 2: Manual Installation (Step-by-Step)
+## 🛠 **Method 2: Manual Installation (Step-by-Step)**
 
-### 1. Update Linux Packages
+### 1. **Update Linux Packages**
 
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y curl git build-essential
 ```
 
-### 2. Install Node.js (via NVM)
+### 2. **Install Node.js (via NVM)**
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
@@ -114,11 +114,12 @@ source ~/.bashrc
 nvm install --lts
 ```
 
-### 3. Install Claude Code & CCR Router
+### 3. **Verify Installation**:
+   ```
+   node -v
+   npm -v
+   ```
 
-```bash
-npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
-```
 
 ---
 
@@ -137,7 +138,13 @@ echo $SHELL
 
 ---
 
-### Step 2: Create Config File (Google Gemini)
+### 2. Install Claude Code & CCR Router
+
+```bash
+npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
+```
+
+### Step 3: Create Config File (Google Gemini)
 
 ```bash
 mkdir -p ~/.claude-code-router ~/.claude
@@ -181,6 +188,8 @@ EOF
 
 ---
 
+
+
 ### 📊 Model Performance & Quota (Free Tier)
 
 Before you run the agent, check the current limits for the models included in the config above. These limits are reset at **Midnight Pacific Time (PT)**.
@@ -204,6 +213,63 @@ Before you run the agent, check the current limits for the models included in th
 
 
 ---
+
+6. **Verify Config File**:
+   ```
+   cat ~/.claude-code-router/config.json
+   ```
+   - Check if it matches the JSON above.
+
+7. **Add Google API Key to Ubuntu Environment** 🌐:
+   - Check your shell:
+     ```
+     echo $SHELL
+     ```
+     - Most likely: `/bin/bash`
+   - Add the key to `.bashrc`:
+     ```
+     echo 'export GOOGLE_API_KEY="YOUR_KEY_HERE"' >> ~/.bashrc
+     source ~/.bashrc
+     ```
+     - Replace `YOUR_KEY_HERE` with your actual API key.
+
+8. **Verify Key**:
+   ```
+   echo $GOOGLE_API_KEY
+   ```
+   - Should display your key.
+
+9. **Verify Installations**:
+   ```
+   claude --version
+   ccr
+   ```
+   - `ccr` should show command options if installed correctly.
+
+**Setup Done!** 🎉 You're ready to use Claude.
+
+## Step 5: Daily Workflow (Ubuntu Version) 📅
+Use two terminals for smooth operation.
+
+1. **Terminal 1: Start Router** ▶️:
+   ```
+   ccr start
+   ```
+   - Wait for: **Service started successfully**.
+
+2. **Terminal 2: Use Claude** 🧑‍💻:
+   - Create a project folder:
+     ```
+     mkdir -p ~/your-project
+     cd ~/your-project
+     ```
+   - Activate and use Claude:
+     ```
+     eval "$(ccr activate)"
+     claude
+     ```
+     - OR directly: `ccr code`
+
 
 ### Step 3: Set API Key
 
@@ -269,6 +335,26 @@ Use these commands to verify your setup:
 - `ccr status` — Check if the background service is running.
 - `/status` — (Inside Claude) Verify the Base URL is 127.0.0.1:3456.
 
----  
+--- 
+
+## Step 6: Test Claude ✅
+In the Claude session, type:
+```
+hi
+```
+- Expected reply: **Hello! Claude is ready.**
+
+## Troubleshooting ⚠️
+- **API Key Issues**: Ensure `$GOOGLE_API_KEY` is set correctly.
+- **Port Conflicts**: Change `"PORT"` in `config.json` if 3456 is in use.
+- **Rate Limits**: Gemini is free but has daily limits—monitor usage.
+- **Errors**: Check logs (LOG is enabled in config).
+
+## Additional Notes 📝
+- This setup routes to Gemini models like `gemini-2.5-flash` for Claude-like coding assistance.
+- Inspired by YouTube tutorials—credit to original creators!
+- Update tools periodically: `sudo npm update -g @anthropic-ai/claude-code @musistudio/claude-code-router`
+
+Enjoy your free Claude AI setup! If you have issues, feel free to ask. 😊
 
 **Maintained by Irshad Ul Haq** | [LinkedIn Profile](https://www.linkedin.com/in/irshad-ulhaq-ai/)
