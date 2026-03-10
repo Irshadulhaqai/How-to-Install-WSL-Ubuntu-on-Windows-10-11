@@ -20,26 +20,26 @@ This is the first thing you need to do. We are setting up a Linux environment wh
 Using WSL (Ubuntu) is highly recommended over PowerShell because it reduces the chance of errors and uses fewer tokens during coding
 
 
-### 1. Open PowerShell as Administrator
+## 1. Open PowerShell as Administrator
 
 * Press the **Windows** key
 * Search for **PowerShell**
 * Click **Run as administrator**
 * Click **Yes**
 
-### 2. Run the Install Command
+## 2. Run the Install Command
 
 ```bash
 wsl --install
 ```
 
-### 3. Downloading & Launching
+## 3. Downloading & Launching
 
 * Windows will download and install WSL
 * Ubuntu will launch automatically
 * Stay in the same window while it provisions
 
-### 4. Set Your Username & Password
+## 4. Set Your Username & Password
 
 * Enter a **username**
 * Enter a **password**
@@ -47,7 +47,7 @@ wsl --install
 
 > ⚠️ Password typing is hidden. This is normal in Linux.
 
-### 5. Success
+## 5. Success
 
 When you see something like:
 
@@ -62,7 +62,7 @@ Keep this terminal open and continue.
 
 # ⚡ Method 1 — Automatic Speedrun Setup (Recommended)
 
-### 1. Run the Installer
+## 1. Run the Installer
 Inside your **WSL / Ubuntu** terminal, run:
 
 ```bash
@@ -76,20 +76,20 @@ curl -sSL https://raw.githubusercontent.com/devhammad0/claude-code-router-setup/
 source ~/.bashrc
 ```
 
-### 2. Set Your Google API Key
+## 2. Set Your Google API Key
 Replace `YOUR_KEY_HERE` with your key from <a href="https://aistudio.google.com/" target="_blank">Google AI Studio</a>:
 
 ```bash
 echo 'export GOOGLE_API_KEY="YOUR_KEY_HERE"' >> ~/.bashrc
 ```
 
-### 3. Reload your Environment
+## 3. Reload your Environment
 
 ```bash
 source ~/.bashrc
 ```
 
-### 4. Laucnh Claude Code Router
+## 4. Laucnh Claude Code Router
 
 ```bash
 ccr code
@@ -99,14 +99,14 @@ ccr code
 
 # 🛠 **Method 2: Manual Installation (Step-by-Step)**
 
-### 1. **Update Linux Packages**
+## 1. **Update Linux Packages**
 
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y curl git build-essential
 ```
 
-### 2. **Install Node.js (via NVM)**
+## 2. **Install Node.js (via NVM)**
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
@@ -114,7 +114,7 @@ source ~/.bashrc
 nvm install --lts
 ```
 
-### 3. **Verify Installation**:
+## 3. **Verify Installation**:
    ```
    node -v
    npm -v
@@ -125,7 +125,7 @@ nvm install --lts
 
 ## ⚙️ Configuration Setup
 
-### Step 1: Check Your Shell (Important)
+## Step 1: Check Your Shell (Important)
 
 Run:
 
@@ -138,13 +138,13 @@ echo $SHELL
 
 ---
 
-### 2. Install Claude Code & CCR Router
+## 2. Install Claude Code & CCR Router
 
 ```bash
 npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
 ```
 
-### Step 3: Create Config File (Google Gemini)
+## Step 3: Create Config File (Google Gemini)
 
 ```bash
 mkdir -p ~/.claude-code-router ~/.claude
@@ -190,7 +190,7 @@ EOF
 
 
 
-### 📊 Model Performance & Quota (Free Tier)
+## 📊 Model Performance & Quota (Free Tier)
 
 Before you run the agent, check the current limits for the models included in the config above. These limits are reset at **Midnight Pacific Time (PT)**.
 
@@ -214,13 +214,13 @@ Before you run the agent, check the current limits for the models included in th
 
 ---
 
-6. **Verify Config File**:
+## 6. **Verify Config File**:
    ```
    cat ~/.claude-code-router/config.json
    ```
    - Check if it matches the JSON above.
 
-7. **Add Google API Key to Ubuntu Environment** 🌐:
+## 7. **Add Google API Key to Ubuntu Environment** 🌐:
    - Check your shell:
      ```
      echo $SHELL
@@ -233,13 +233,13 @@ Before you run the agent, check the current limits for the models included in th
      ```
      - Replace `YOUR_KEY_HERE` with your actual API key.
 
-8. **Verify Key**:
+## 8. **Verify Key**:
    ```
    echo $GOOGLE_API_KEY
    ```
    - Should display your key.
 
-9. **Verify Installations**:
+## 9. **Verify Installations**:
    ```
    claude --version
    ccr
@@ -251,13 +251,13 @@ Before you run the agent, check the current limits for the models included in th
 ## Step 5: Daily Workflow (Ubuntu Version) 📅
 Use two terminals for smooth operation.
 
-1. **Terminal 1: Start Router** ▶️:
+## 1. **Terminal 1: Start Router** ▶️:
    ```
    ccr start
    ```
    - Wait for: **Service started successfully**.
 
-2. **Terminal 2: Use Claude** 🧑‍💻:
+## 2. **Terminal 2: Use Claude** 🧑‍💻:
    - Create a project folder:
      ```
      mkdir -p ~/your-project
@@ -271,7 +271,7 @@ Use two terminals for smooth operation.
      - OR directly: `ccr code`
 
 
-### Step 3: Set API Key
+## Step 3: Set API Key
 
 Use the shell configuration file you identified in Step 1. Replace `YOUR_KEY_HERE` with your actual Google AI Studio API key.
 
@@ -318,7 +318,7 @@ ccr start
 ccr code
 ```
 
-### 2. Status shows "Not Running"  
+## 2. Status shows "Not Running"  
 
 This usually means a "ghost" process is already using the port. Run this to clear it:
 
@@ -328,7 +328,7 @@ sudo lsof -i :3456
 # Use the PID found to kill it: sudo kill -9 <PID>
 ```
 
-### 3. Verification Commands  
+## 3. Verification Commands  
 
 Use these commands to verify your setup:
 
