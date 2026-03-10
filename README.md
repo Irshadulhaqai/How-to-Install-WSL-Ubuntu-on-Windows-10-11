@@ -144,34 +144,20 @@ ccr
 ```
 
 ---
-## ⚙️ Configuration Setup
 
-## Step 1: Check Your Shell (Important)
+## ⚙️ 5. **Create Configuration File:**
 
-Run:
+Run the following command to create your configuration:
 
-```bash
-echo $SHELL
-```
-
-* If output contains `/bash` → use `~/.bashrc`
-* If output contains `/zsh` → use `~/.zshrc`
-
----
-
-## 2. Install Claude Code & CCR Router
-
-```bash
-npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
-```
-
-## Step 3: Create Config File (Google Gemini)
+Create directories:
 
 ```bash
 mkdir -p ~/.claude-code-router ~/.claude
 ```
 
-Run the following command to create your configuration:
+---
+
+Create config file:
 
 ```json
 cat > ~/.claude-code-router/config.json << 'EOF'
@@ -207,9 +193,13 @@ cat > ~/.claude-code-router/config.json << 'EOF'
 EOF
 ```
 
+Verify file:
+
+```bash
+cat ~/.claude-code-router/config.json
+```
+
 ---
-
-
 
 ## 📊 Model Performance & Quota (Free Tier)
 
