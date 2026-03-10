@@ -1,6 +1,3 @@
-# How-to-Install-WSL-Ubuntu-on-Windows-10-11-
-
-
 # 🚀 Claude Code Router: Master Setup Guide (WSL + Gemini)
 
 [![Watch the Tutorial](https://img.youtube.com/vi/Kerha8oWWug/maxresdefault.jpg)](https://youtu.be/Kerha8oWWug)
@@ -62,8 +59,8 @@ Keep this terminal open and continue.
 
 # ⚡ Method 1 — Automatic Speedrun Setup (Recommended)
 
-## 1. Run the Installer
-Inside your **WSL / Ubuntu** terminal, run:
+## Run installer script
+Run this inside **WSL / Ubuntu terminal**.
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/devhammad0/claude-code-router-setup/main/scripts/install.sh | bash
@@ -77,7 +74,12 @@ source ~/.bashrc
 ```
 
 ## 2. Set Your Google API Key
-Replace `YOUR_KEY_HERE` with your key from <a href="https://aistudio.google.com/" target="_blank">Google AI Studio</a>:
+
+Get your key from:  
+https://aistudio.google.com/  
+
+Then run:  
+Replace `YOUR_KEY_HERE` with your key 
 
 ```bash
 echo 'export GOOGLE_API_KEY="YOUR_KEY_HERE"' >> ~/.bashrc
