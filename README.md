@@ -130,6 +130,20 @@ nvm install --lts
 
 ---
 
+## Step 4. **Install Claude Code & Router:**
+
+```bash
+npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
+```
+
+Verify:
+
+```bash
+claude --version
+ccr
+```
+
+---
 ## ⚙️ Configuration Setup
 
 ## Step 1: Check Your Shell (Important)
