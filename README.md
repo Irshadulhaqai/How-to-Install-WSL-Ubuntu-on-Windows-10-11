@@ -142,6 +142,7 @@ Verify:
 claude --version
 ccr
 ```
+- `ccr` should show command options if installed correctly.
 
 ---
 
@@ -203,26 +204,41 @@ EOF
 
 ## 6. **Add Google API Key 🔑 to Ubuntu Environment** 🌐:
    - Check your shell:
-     ```
-     echo $SHELL
-     ```
+   ```
+   echo $SHELL
+   ```
    - Most likely: `/bin/bash`
    - Add the key to `.bashrc`:
 
-     Get your key from:  
-https://aistudio.google.com/
+   Get your key from:  
+   https://aistudio.google.com/
 
-     ```
-     echo 'export GOOGLE_API_KEY="YOUR_KEY_HERE"' >> ~/.bashrc
-     source ~/.bashrc
-     ```
-     - Replace `YOUR_KEY_HERE` with your actual API key.
+## Step 4: Set API Key
+
+Use the shell configuration file you identified in Step 1. Replace `YOUR_KEY_HERE` with your actual Google AI Studio API key.
+
+**If using bash:**
+
+```bash
+echo 'export GOOGLE_API_KEY="YOUR_KEY_HERE"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+**If using zsh:**
+
+```bash
+echo 'export GOOGLE_API_KEY="YOUR_KEY_HERE"' >> ~/.zshrc
+source ~/.zshrc
+```
 
 ## 8. **Verify Key**:
    ```
    echo $GOOGLE_API_KEY
    ```
    - Should display your key.
+**Setup Done!** 🎉 You're ready to use Claude.
+
+---
 
 ## 📊 Model Performance & Quota (Free Tier)
 
@@ -249,15 +265,6 @@ Before you run the agent, check the current limits for the models included in th
 ---
 
 
-## 9. **Verify Installations**:
-   ```
-   claude --version
-   ccr
-   ```
-   - `ccr` should show command options if installed correctly.
-
-**Setup Done!** 🎉 You're ready to use Claude.
-
 ## Step 5: Daily Workflow (Ubuntu Version) 📅
 Use two terminals for smooth operation.
 
@@ -281,23 +288,6 @@ Use two terminals for smooth operation.
      - OR directly: `ccr code`
 
 
-## Step 3: Set API Key
-
-Use the shell configuration file you identified in Step 1. Replace `YOUR_KEY_HERE` with your actual Google AI Studio API key.
-
-**If using bash:**
-
-```bash
-echo 'export GOOGLE_API_KEY="YOUR_KEY_HERE"' >> ~/.bashrc
-source ~/.bashrc
-```
-
-**If using zsh:**
-
-```bash
-echo 'export GOOGLE_API_KEY="YOUR_KEY_HERE"' >> ~/.zshrc
-source ~/.zshrc
-```
 
 ---
 
