@@ -79,11 +79,11 @@ Get your key from:
 https://aistudio.google.com/  
 
 Then run:  
-Replace `YOUR_KEY_HERE` with your key 
 
 ```bash
 echo 'export GOOGLE_API_KEY="YOUR_KEY_HERE"' >> ~/.bashrc
 ```
+Replace `YOUR_KEY_HERE` with your key 
 
 ## 3. Reload your Environment
 
@@ -199,6 +199,26 @@ Verify file:
 cat ~/.claude-code-router/config.json
 ```
 
+---
+
+## 🔑 6. **Add Google API Key**
+
+Get your key from:  
+https://aistudio.google.com/  
+
+Then run:  
+Replace `YOUR_KEY_HERE` with your key 
+
+```bash
+echo 'export GOOGLE_API_KEY="YOUR_KEY_HERE"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+Verify:
+
+```bash
+echo $GOOGLE_API_KEY
+```
 ---
 
 ## 📊 Model Performance & Quota (Free Tier)
