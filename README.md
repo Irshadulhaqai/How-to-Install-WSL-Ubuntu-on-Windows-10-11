@@ -235,7 +235,7 @@ source ~/.zshrc
    ```
    echo $GOOGLE_API_KEY
    ```
-   - Should display your key.
+   - Should display your key.  
 **Setup Done!** 🎉 You're ready to use Claude.
 
 ---
