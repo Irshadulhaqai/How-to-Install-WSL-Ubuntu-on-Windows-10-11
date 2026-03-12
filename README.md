@@ -201,31 +201,28 @@ EOF
 
 ---
 
-## 🔑 6. **Add Google API Key**
+## 6. **Add Google API Key 🔑 to Ubuntu Environment** 🌐:
+   - Check your shell:
+     ```
+     echo $SHELL
+     ```
+   - Most likely: `/bin/bash`
+   - Add the key to `.bashrc`:
 
-Check your shell:
+     Get your key from:  
+https://aistudio.google.com/
 
-```bash
-echo $SHELL
-```
+     ```
+     echo 'export GOOGLE_API_KEY="YOUR_KEY_HERE"' >> ~/.bashrc
+     source ~/.bashrc
+     ```
+     - Replace `YOUR_KEY_HERE` with your actual API key.
 
-Get your key from:  
-https://aistudio.google.com/  
-
-Then run:  
-Replace `YOUR_KEY_HERE` with your key 
-
-```bash
-echo 'export GOOGLE_API_KEY="YOUR_KEY_HERE"' >> ~/.bashrc
-source ~/.bashrc
-```
-
-Verify:
-
-```bash
-echo $GOOGLE_API_KEY
-```
----
+## 8. **Verify Key**:
+   ```
+   echo $GOOGLE_API_KEY
+   ```
+   - Should display your key.
 
 ## 📊 Model Performance & Quota (Free Tier)
 
@@ -251,30 +248,6 @@ Before you run the agent, check the current limits for the models included in th
 
 ---
 
-## 6. **Verify Config File**:
-   ```
-   cat ~/.claude-code-router/config.json
-   ```
-   - Check if it matches the JSON above.
-
-## 7. **Add Google API Key to Ubuntu Environment** 🌐:
-   - Check your shell:
-     ```
-     echo $SHELL
-     ```
-     - Most likely: `/bin/bash`
-   - Add the key to `.bashrc`:
-     ```
-     echo 'export GOOGLE_API_KEY="YOUR_KEY_HERE"' >> ~/.bashrc
-     source ~/.bashrc
-     ```
-     - Replace `YOUR_KEY_HERE` with your actual API key.
-
-## 8. **Verify Key**:
-   ```
-   echo $GOOGLE_API_KEY
-   ```
-   - Should display your key.
 
 ## 9. **Verify Installations**:
    ```
