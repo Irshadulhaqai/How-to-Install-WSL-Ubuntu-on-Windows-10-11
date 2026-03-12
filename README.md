@@ -60,7 +60,7 @@ Keep this terminal open and continue.
 # ⚡ Method 1 — Automatic Speedrun Setup (Recommended)
 
 ## Run installer script
-Run this inside **WSL / Ubuntu terminal**.
+inside **WSL / Ubuntu terminal**.
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/devhammad0/claude-code-router-setup/main/scripts/install.sh | bash
@@ -193,15 +193,21 @@ cat > ~/.claude-code-router/config.json << 'EOF'
 EOF
 ```
 
-Verify file:
-
-```bash
-cat ~/.claude-code-router/config.json
-```
+**Verify Config File**:
+   ```
+   cat ~/.claude-code-router/config.json
+   ```
+   - Check if it matches the JSON above.
 
 ---
 
 ## 🔑 6. **Add Google API Key**
+
+Check your shell:
+
+```bash
+echo $SHELL
+```
 
 Get your key from:  
 https://aistudio.google.com/  
